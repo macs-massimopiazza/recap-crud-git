@@ -4,11 +4,21 @@
     <div class="container">
         <div class="row">
             <div class="off-set-3 col-6">
-                <ul>
+                <div class="row">
                     @foreach ($collectors as $collector)
-                        <li>{{ $collector->first_name }} <img src="{{ $collector->path_img }}" alt="{{ $collector->first_name }}"></li>
+                    <div class="col-4 mt-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">{{ $collector->first_name }}</h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="card-img-top" src="{{ $collector->path_img }}">
+                                <p class="card-text">Auto: {{ $collector->cars_num }}</p>
+                            </div>
+                        </div>
+                    </div>
                     @endforeach
-                </ul>
+                </div>
             </div>
         </div>
     </div>
