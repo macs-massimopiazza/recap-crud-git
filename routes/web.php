@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\CollectorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MainController::class, 'welcome']);
+
+Route::get('/collectors', [CollectorController::class, 'index']);
