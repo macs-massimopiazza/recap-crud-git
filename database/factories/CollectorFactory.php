@@ -17,9 +17,9 @@ class CollectorFactory extends Factory
     public function definition()
     {
         return [
-            'first_name' => fake() -> firstName(),
-            'path_img' => fake() -> imageUrl(480, 480, 'people', true),
-            'cars_num' => fake() -> numberBetween(2, 50)
+            'first_name' => fake()->firstName(),
+            'path_img' => "https://i.pravatar.cc/150?u=" . fake()->numerify('##########'),
+            'cars_num' => fake()->numberBetween(2, 50)
         ];
     }
 }
